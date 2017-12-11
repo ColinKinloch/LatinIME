@@ -19,7 +19,7 @@
 #include <algorithm>
 #include <cmath>
 #include <cstring> // for memset()
-#include <sstream> // for debug prints
+//#include <sstream> // for debug prints
 #include <unordered_map>
 #include <vector>
 
@@ -755,7 +755,7 @@ namespace latinime {
         }
     }
 
-    if (DEBUG_POINTS_PROBABILITY) {
+    /*if (DEBUG_POINTS_PROBABILITY) {
         for (int i = 0; i < sampledInputSize; ++i) {
             std::stringstream sstream;
             sstream << i << ", ";
@@ -781,7 +781,7 @@ namespace latinime {
             }
             AKLOGI("%s", sstream.str().c_str());
         }
-    }
+    }*/
 
     // Decrease key probabilities of points which don't have the highest probability of that key
     // among nearby points. Probabilities of the first point and the last point are not suppressed.
@@ -985,7 +985,7 @@ namespace latinime {
         }
     }
 
-    std::stringstream originalX, originalY, sampledX, sampledY;
+    /*std::stringstream originalX, originalY, sampledX, sampledY;
     for (int i = 0; i < inputSize; ++i) {
         originalX << inputXCoordinates[i];
         originalY << inputYCoordinates[i];
@@ -1010,6 +1010,6 @@ namespace latinime {
     }
     AKLOGI("original points:\n%s, %s,\nsampled points:\n%s, %s,\n",
             originalX.str().c_str(), originalY.str().c_str(), sampledX.str().c_str(),
-            sampledY.str().c_str());
+            sampledY.str().c_str());*/
 }
 } // namespace latinime
